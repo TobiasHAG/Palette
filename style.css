@@ -146,7 +146,7 @@ body {
     opacity: 0;
     font-size: 25px;
     color: black;
-    font-weight: bold;
+    font-weight: 400;
     font-family: 'Oswald', sans-serif;
     box-shadow: white;
     margin-top: 2vh;
@@ -175,6 +175,7 @@ body {
 
 .main-title-container p > span {
     opacity: 0;
+    font-weight: bold;
 }
 
 .main-title-container:hover p > span:nth-child(1) {
