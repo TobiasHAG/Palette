@@ -1,0 +1,213 @@
+body {
+    background-color: rgb(233, 220, 198);
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#gallery {
+    height: 140vmax;
+    width: 140vmax;
+    position: absolute;
+}
+
+.tile {
+    border-radius: 1vmax;
+    position: absolute;
+    transition: transform 800ms ease;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.7); 
+}
+
+.tile:hover {
+    transform: scale(1.1);
+}
+
+.tile > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 800ms ease,
+                transform 800ms ease;
+}
+
+.tile:hover > img {
+    opacity: 1;
+    transform: scale(1.01);
+}
+
+.tile:nth-child(1) {
+    background-color: rgb(255, 238, 88);
+    height: 14%;
+    width: 20%;
+    left: 5%;
+    top: 5%;
+}
+
+.tile:nth-child(2) {
+    background-color: rgb(66, 165, 245);
+    height: 24%;
+    width: 14%;
+    left: 42%;
+    top: 10%;
+}
+
+.tile:nth-child(3) {
+    background-color: rgb(239, 83, 80);
+    height: 18%;
+    width: 16%;
+    left: 12%;
+    top: 34%;
+}
+
+.tile:nth-child(4) {
+    background-color: rgb(102, 187, 106);
+    height: 14%;
+    width: 12%;
+    left: 18%;
+    top: 15%;
+}
+
+.tile:nth-child(5) {
+    background-color: rgb(171, 71, 188);
+    height: 16%;
+    width: 32%;
+    left: 6%;
+    top: 65%;
+}
+
+.tile:nth-child(6) {
+    background-color: rgb(255, 167, 38);
+    height: 24%;
+    width: 24%;
+    left: 68%;
+    top: 8%;
+}
+
+.tile:nth-child(7) {
+    background-color: rgb(63, 81, 181);
+    height: 16%;
+    width: 20%;
+    left: 50%;
+    top: 71%;
+}
+
+.tile:nth-child(8) {
+    background-color: rgb(141, 110, 99);
+    height: 24%;
+    width: 18%;
+    left: 72%;
+    top: 42%;
+}
+
+.tile:nth-child(9) {
+    background-color: rgb(250, 250, 250);
+    height: 10%;
+    width: 8%;
+    left: 84%;
+    top: 84%;
+}
+
+.main-title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-title-container {
+    width: 25vw;
+    height: 65vh;
+    background-color: rgb(230, 225, 216);
+    border-radius: 1vmax;
+    position: absolute;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 0 20px 0;
+}
+
+.main-title-container > h1 {
+    font-size: 60px;
+    color: black;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: white;
+    margin-bottom: 0;
+    margin-top: -4%;
+}
+
+.main-title-container > p {
+    opacity: 0;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: white;
+    margin-top: 2vh;
+    margin-bottom: 0;
+}
+
+.main-title-container:hover > p {
+    animation: anim-opacity-p;
+    animation-timing-function: cubic-bezier(.66,.38,.75,.66);
+    animation-duration: 8s;}
+
+.main-title-container p:last-child {
+    opacity: 0;
+    font-size: 18px;
+    color: black;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.main-title-container:hover p:last-child {
+    animation-name: anim-opacity-span;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 6s;
+}
+
+.main-title-container p > span {
+    opacity: 0;
+}
+
+.main-title-container:hover p > span:nth-child(1) {
+    animation-name: anim-opacity-span;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.main-title-container:hover p > span:nth-child(2) {
+    animation-name: anim-opacity-span;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+.main-title-container:hover p > span:nth-child(3) {
+    animation-name: anim-opacity-span;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+
+@keyframes anim-opacity-span {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    85% {opacity: 1;}
+    90% {opacity: 0.5;}
+    100% {opacity: 0;}
+}
+
+@keyframes anim-opacity-p {
+    0% {opacity: 0;}
+    5% {opacity: 1;}
+    97% {opacity: 1;}
+    100% {opacity: 0;}
+}
